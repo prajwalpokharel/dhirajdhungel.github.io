@@ -13,7 +13,7 @@
 
 .top-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 50px;  
     position: fixed;
     top: 10px;
@@ -58,10 +58,44 @@ nav.page-nav{
 
 }
 
-.aa{
-    height: 1500px;
+.burger{
+    display:none;
 }
 
+
+
+@media only screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    header a{
+        font-size: 35px;
+    }
+    .fa{
+        font-size: 20px;
+        border: none;
+    }
+    .burger div{
+        width: 20px;
+        height: 3px;
+        background-color: rgb(22, 22, 22);
+        margin: 4px;
+    }
+    nav.page-nav {
+        background-color: rgb(172, 172, 172) ;
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        height: 90vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+
+
+    }
+  }
+}
 /*
 .fa-facebook {
     background: #3B5998;
