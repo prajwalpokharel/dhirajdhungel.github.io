@@ -16,9 +16,9 @@
     justify-content: space-around;
     height: 50px;  
     position: fixed;
-    top: 10px;
-    left: 10px;
-    right: 10px;
+    top: 20px;
+    left: 0px;
+    right: 0px;
     transition: top 0.3s
 }
 
@@ -64,38 +64,136 @@ nav.page-nav{
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 260px) {
     body{
         overflow-x: hidden;
     }
+
     header a{
-        font-size: 35px;
+        font-size: 25px;
     }
+
     .fa{
-        font-size: 20px;
+        font-size: 10px;
+        padding: 2px;
         border: none;
+        
     }
+
     .burger div{
         width: 20px;
         height: 3px;
         background-color: rgb(22, 22, 22);
         margin: 4px;
     }
+
     nav.page-nav {
         background-color: rgb(172, 172, 172) ;
         position: absolute;
         right: 0;
-        top: 15vh;
-        height: 90vh;
+        top: 10vh;
+        height: 85vh;
         display:flex;
         flex-direction: column;
         align-items: center;
         width: 40%;
-
-
+        transform: translate(100%);
     }
+
+    .page-nav a{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+  
+}
+
+@media only screen and (min-width:260px) and (max-width: 450px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    header a{
+        font-size: 30px;
+    }
+
+    .fa{
+        font-size: 15px;
+        padding: 3px;
+        border: none;
+    }
+
+    .burger div{
+        width: 20px;
+        height: 3px;
+        background-color: rgb(22, 22, 22);
+        margin: 4px;
+    }
+
+    nav.page-nav {
+        background-color: rgb(172, 172, 172) ;
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        height: 85vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translate(100%);
+    }
+
+    .page-nav a{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+  
+}
+
+@media only screen and (min-width:450px) and (max-width:760px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    header a{
+        font-size: 35px;
+    }
+
+    .fa{
+        font-size: 20px;
+        border: none;
+    }
+
+    .burger div{
+        width: 20px;
+        height: 3px;
+        background-color: rgb(22, 22, 22);
+        margin: 4px;
+    }
+
+    nav.page-nav {
+        background-color: rgb(172, 172, 172) ;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        height: 85vh;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+    }
+  .page-nav a{
+      opacity: 0;
+  }
+  .burger{
+      display: block;
   }
 }
+
 /*
 .fa-facebook {
     background: #3B5998;
