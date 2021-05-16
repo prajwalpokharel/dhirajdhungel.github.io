@@ -85,7 +85,7 @@ nav.page-nav{
         background-color: rgb(172, 172, 172) ;
         position: absolute;
         right: 0;
-        top: 8vh;
+        top: 15vh;
         height: 90vh;
         display:flex;
         flex-direction: column;
