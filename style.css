@@ -19,7 +19,6 @@
     top: 20px;
     left: 0px;
     right: 0px;
-    transition: top 0.3s
 }
 
 div.social-links{
@@ -65,7 +64,7 @@ nav.page-nav{
 
 
 
-@media only screen and (max-width: 260px) {
+@media only screen and (max-width: 640px) {
     body{
         overflow-x: hidden;
     }
@@ -82,10 +81,10 @@ nav.page-nav{
     }
 
     .burger div{
-        width: 20px;
-        height: 3px;
+        width: 35px;
+        height: 5px;
         background-color: rgb(22, 22, 22);
-        margin: 4px;
+        margin: 6px 0;
     }
 
     nav.page-nav {
@@ -98,123 +97,46 @@ nav.page-nav{
         flex-direction: column;
         align-items: center;
         width: 40%;
-        transform: translate(100%);
+        transform: translateX(100%);
+        transition: transform 0.3s ;
     }
-
-    .page-nav a{
-        opacity: 0;
-    }
+    
     .burger{
         display: block;
     }
   
 }
 
-@media only screen and (min-width:260px) and (max-width: 450px) {
-    body{
-        overflow-x: hidden;
+ 
+    .toggle .lin1{
+        transform: rotate(-45deg) translate(-9px,6px); 
     }
     
-    header a{
-        font-size: 30px;
-    }
-
-    .fa{
-        font-size: 15px;
-        padding: 3px;
-        border: none;
-    }
-
-    .burger div{
-        width: 20px;
-        height: 3px;
-        background-color: rgb(22, 22, 22);
-        margin: 4px;
-    }
-
-    nav.page-nav {
-        background-color: rgb(172, 172, 172) ;
-        position: absolute;
-        right: 0;
-        top: 10vh;
-        height: 85vh;
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        width: 40%;
-        transform: translate(100%);
-    }
-
-    .page-nav a{
+    .toggle .lin2{
         opacity: 0;
     }
-    .burger{
-        display: block;
+    .toggle .lin3{
+        transform: rotate(45deg) translate(-9px,-6px);
     }
-  
-}
-
-@media only screen and (min-width:450px) and (max-width:760px) {
-    body{
-        overflow-x: hidden;
-    }
-    
-    header a{
-        font-size: 35px;
-    }
-
-    .fa{
-        font-size: 20px;
-        border: none;
-    }
-
-    .burger div{
-        width: 20px;
-        height: 3px;
-        background-color: rgb(22, 22, 22);
-        margin: 4px;
-    }
-
-    nav.page-nav {
-        background-color: rgb(172, 172, 172) ;
-        position: absolute;
-        right: 0px;
-        top: 10vh;
-        height: 85vh;
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translate(100%);
-        transition: transform 0.5s ease-in;
-    }
-  .page-nav a{
-      opacity: 0;
-  }
-  .burger{
-      display: block;
-  }
-}
-
-.nav-active{
-    transform: translateX(0%);
-}
 @keyframes navLinkFade{
  from {
      opacity: 0;
-     transform: translateX(50px);
- }   
- to{
+     transform: translateX(50%);
+      }   
+ to {
      opacity: 1;
-     transform: translateX(0px);
-}
-.toggle .lin1{
-    transform: rotate(-45deg translate(-5px,6px)); 
+     transform: translateX(0);
+     }
 }
 
-.toggle .lin2{
-    opacity: 0;
+.burger div
+{
+    width: 35px;
+    height: 5px;
+    background-color: rgb(22, 22, 22);
+    margin: 6px 0;
 }
-.toggle .lin3{
-    transform: rotate(45deg translate(-5px,-6px));
+nav.nav-active
+{
+    transform: translateX(0);
 }
