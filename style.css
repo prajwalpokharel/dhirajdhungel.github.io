@@ -29,8 +29,6 @@ div.social-links{
 header.header{
     display: flex;
     justify-content: center;
-    
-    
 }
 header a{
     font-family: 'Dancing Script',cursive;
@@ -38,14 +36,16 @@ header a{
     text-decoration: none;
     color: rgb(22, 22, 22);
 }
-.in{
+
+/* Have a proper naming of classes ffs */
+.links{
     text-decoration: none;
     font-size: 20px;
     color: black;
     padding: 2px;
 }
 
-.in:hover{
+.links:hover{
     background: rgb(0, 0, 0, 0.2);
 }
 
@@ -54,15 +54,12 @@ nav.page-nav{
     justify-content: space-between;
     width: 200px;
     align-items: center;
-
 }
 
 .burger{
     display:none;
     cursor: pointer;
 }
-
-
 
 @media only screen and (max-width: 640px) {
     body{
@@ -85,6 +82,7 @@ nav.page-nav{
         height: 5px;
         background-color: rgb(22, 22, 22);
         margin: 6px 0;
+        transition: 0.3s transform; /* animate the burger toggle */
     }
 
     nav.page-nav {
@@ -104,29 +102,33 @@ nav.page-nav{
     .burger{
         display: block;
     }
+    .links {
+        opacity: 0; /* make the links inside the nav transparent so we can animate (fade it in). */
+    }
   
 }
 
- 
-    .toggle .lin1{
-        transform: rotate(-45deg) translate(-9px,6px); 
-    }
-    
-    .toggle .lin2{
-        opacity: 0;
-    }
-    .toggle .lin3{
-        transform: rotate(45deg) translate(-9px,-6px);
-    }
+/* fixed some tabs here lol */
+.toggle .lin1{
+    transform: rotate(-45deg) translate(-9px,6px); 
+}
+
+.toggle .lin2{
+    opacity: 0;
+}
+.toggle .lin3{
+    transform: rotate(45deg) translate(-9px,-6px);
+}
+
 @keyframes navLinkFade{
- from {
-     opacity: 0;
-     transform: translateX(50%);
-      }   
- to {
-     opacity: 1;
-     transform: translateX(0);
-     }
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }   
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .burger div
